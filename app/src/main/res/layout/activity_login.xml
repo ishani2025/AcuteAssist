@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
+
+<!--</ConstraintLayout>-->
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Logo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="20dp"
+            android:paddingBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:background="@drawable/bg_logo"
+                android:gravity="center"
+                android:elevation="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="✚"
+                    android:textColor="#FFFFFF"
+                    android:textSize="32sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AcuteAssist"
+                android:textColor="@color/text_primary"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginTop="14dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intelligent Clinical Records System"
+                android:textColor="@color/text_muted"
+                android:textSize="13sp"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- Role Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SELECT YOUR ROLE"
+            android:textColor="@color/text_muted"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.08"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Role Cards -->
+        <LinearLayout
+            android:id="@+id/roleDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_role_card"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:text="👨‍⚕️"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:background="#260094FF"
+                android:layout_marginEnd="14dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Doctor"
+                    android:textColor="@color/text_primary"
+                    android:textSize="15sp"
+                    android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Full patient record access &amp; editing"
+                    android:textColor="@color/text_muted"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/checkDoctor"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:text="✓"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:background="#00C2FF"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/roleNurse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_role_card"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="10dp">
+
+            <TextView android:layout_width="44dp" android:layout_height="44dp"
+                android:text="👩‍⚕️" android:textSize="22sp" android:gravity="center"
+                android:background="#2600E676" android:layout_marginEnd="14dp"/>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Nurse" android:textColor="@color/text_primary"
+                    android:textSize="15sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Vitals, medications, patient notes"
+                    android:textColor="@color/text_muted" android:textSize="12sp"/>
+            </LinearLayout>
+            <TextView android:id="@+id/checkNurse" android:layout_width="20dp"
+                android:layout_height="20dp" android:text="✓" android:textColor="#FFFFFF"
+                android:textSize="10sp" android:gravity="center"
+                android:background="#00C2FF" android:visibility="invisible"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/roleAdmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_role_card"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
+
+            <TextView android:layout_width="44dp" android:layout_height="44dp"
+                android:text="🧑‍💼" android:textSize="22sp" android:gravity="center"
+                android:background="#26FFC107" android:layout_marginEnd="14dp"/>
+
+            <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content"
+                android:layout_weight="1" android:orientation="vertical">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Non-Medical Staff" android:textColor="@color/text_primary"
+                    android:textSize="15sp" android:textStyle="bold"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Administrative &amp; basic info access"
+                    android:textColor="@color/text_muted" android:textSize="12sp"/>
+            </LinearLayout>
+            <TextView android:id="@+id/checkAdmin" android:layout_width="20dp"
+                android:layout_height="20dp" android:text="✓" android:textColor="#FFFFFF"
+                android:textSize="10sp" android:gravity="center"
+                android:background="#00C2FF" android:visibility="invisible"/>
+        </LinearLayout>
+
+        <!-- Inputs -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="STAFF ID / REGISTRATION NUMBER" android:textColor="@color/text_muted"
+            android:textSize="12sp" android:textStyle="bold" android:letterSpacing="0.08"
+            android:layout_marginBottom="6dp"/>
+        <EditText android:id="@+id/etStaffId"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_input" android:padding="12dp"
+            android:text="MCI-2024-DR-00482" android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_muted" android:textSize="14sp"
+            android:inputType="text" android:layout_marginBottom="14dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="HOSPITAL NAME" android:textColor="@color/text_muted"
+            android:textSize="12sp" android:textStyle="bold" android:letterSpacing="0.08"
+            android:layout_marginBottom="6dp"/>
+        <EditText android:id="@+id/etHospital"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_input" android:padding="12dp"
+            android:text="AIIMS New Delhi" android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_muted" android:textSize="14sp"
+            android:inputType="text" android:layout_marginBottom="14dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="PASSWORD" android:textColor="@color/text_muted"
+            android:textSize="12sp" android:textStyle="bold" android:letterSpacing="0.08"
+            android:layout_marginBottom="6dp"/>
+        <EditText android:id="@+id/etPassword"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_input" android:padding="12dp"
+            android:hint="••••••••" android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_muted" android:textSize="14sp"
+            android:inputType="textPassword" android:layout_marginBottom="8dp"/>
+
+        <Button android:id="@+id/btnSignIn"
+            android:layout_width="match_parent" android:layout_height="52dp"
+            android:background="@drawable/bg_btn_primary"
+            android:text="Sign In Securely →"
+            android:textColor="#FFFFFF" android:textSize="15sp" android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <View android:layout_width="match_parent" android:layout_height="20dp"/>
+    </LinearLayout>
+</ScrollView>
