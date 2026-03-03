@@ -1,13 +1,13 @@
 from database.patient_repository import get_patient_by_id
 from database.test_repository import get_tests_by_patient
-from services.deterministic_filter import extract_clinical_markers
 
-from services.case_router_service import detect_case
+from services.deterministic_filter import extract_clinical_markers
 from services.case1_service import process_local_history
 from services.case2_service import fetch_fragmented_history
 from services.context_services import build_context
-from services.llm_service import ask_llm
+
 from services.retrieval_service import retrieve_context
+from services.rag_pipeline import rag_query
 
 
 async def run_triage(db, symptoms, patient_id=None, aadhaar=None):
@@ -17,6 +17,7 @@ async def run_triage(db, symptoms, patient_id=None, aadhaar=None):
     # -------------------------
     patient = None
     markers = {}
+    history = None
 
     if patient_id:
         patient = get_patient_by_id(db, patient_id)
@@ -24,6 +25,13 @@ async def run_triage(db, symptoms, patient_id=None, aadhaar=None):
         if patient:
             tests = get_tests_by_patient(db, str(patient_id))
             markers = extract_clinical_markers(tests)
+
+            # Case 1: local hospital history
+            history = process_local_history(patient, tests)
+
+    elif aadhaar:
+        # Case 2: fragmented hospital history
+        history = fetch_fragmented_history(aadhaar)
 
     # -------------------------
     # 2. DETERMINISTIC TRIAGE
@@ -37,32 +45,19 @@ async def run_triage(db, symptoms, patient_id=None, aadhaar=None):
         risk_level = "MEDIUM"
 
     # -------------------------
-    # 3. CASE DETECTION
+    # 3. RAG KNOWLEDGE
     # -------------------------
-    case = await detect_case(patient_id, aadhaar)
-
-    history = None
-
-    if case == "LOCAL_HISTORY":
-        history = await process_local_history(["report1.pdf"])
-
-    elif case == "FRAGMENTED_HISTORY":
-        history = await fetch_fragmented_history(aadhaar)
-
-    # -------------------------
-    # 4. RAG KNOWLEDGE
-    # -------------------------
-    knowledge = retrieve_context(symptoms)
+    knowledge, _ = retrieve_context(symptoms)
 
     context = build_context(symptoms, history, knowledge)
 
     # -------------------------
-    # 5. LLM TRIAGE
+    # 4. AI TRIAGE
     # -------------------------
-    ai_result = ask_llm(context)
+    ai_result = rag_query(symptoms)
 
     # -------------------------
-    # 6. FINAL RESPONSE
+    # 5. FINAL RESPONSE
     # -------------------------
     return {
         "patient_id": patient_id,
