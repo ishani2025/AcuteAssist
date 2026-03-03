@@ -1,0 +1,558 @@
+Chunk 1
+Clinical Context:
+Coronary artery disease occurs when plaque builds up inside coronary arteries, narrowing them and reducing blood flow to the heart muscle.
+
+Doctor Action Steps:
+1. Assess patient symptoms such as chest pain or shortness of breath.
+2. Evaluate cardiovascular risk factors.
+3. Order ECG and cardiac biomarkers.
+4. Initiate risk factor management.
+5. Monitor patient for worsening symptoms.
+
+Emergency Level: MODERATE
+
+
+Chunk 2
+Clinical Context:
+Atherosclerosis is the buildup of cholesterol‑containing plaques inside artery walls, which reduces blood flow and increases risk of heart attack.
+
+Doctor Action Steps:
+1. Assess patient cardiovascular history.
+2. Evaluate cholesterol levels.
+3. Order lipid profile testing.
+4. Initiate lifestyle and medication therapy.
+5. Monitor for progression of coronary disease.
+
+Emergency Level: MODERATE
+
+
+Chunk 3
+Clinical Context:
+Angina occurs when the heart muscle does not receive enough oxygen due to narrowed coronary arteries.
+
+Doctor Action Steps:
+1. Evaluate chest pain characteristics.
+2. Assess physical activity triggers.
+3. Perform ECG testing.
+4. Administer nitroglycerin if prescribed.
+5. Monitor patient symptoms closely.
+
+Emergency Level: HIGH
+
+
+Chunk 4
+Clinical Context:
+Chest pain caused by coronary artery disease may occur during physical activity when the heart requires more oxygen.
+
+Doctor Action Steps:
+1. Assess pain severity and location.
+2. Monitor heart rate and blood pressure.
+3. Evaluate oxygen saturation.
+4. Provide nitroglycerin if appropriate.
+5. Prepare for emergency transport if symptoms worsen.
+
+Emergency Level: HIGH
+
+
+Chunk 5
+Clinical Context:
+Common symptoms of reduced blood flow to the heart include chest pressure, tightness, or squeezing pain.
+
+Doctor Action Steps:
+1. Perform immediate cardiac assessment.
+2. Obtain ECG monitoring.
+3. Administer oxygen if needed.
+4. Evaluate cardiac enzyme levels.
+5. Prepare patient for further cardiac evaluation.
+
+Emergency Level: HIGH
+
+
+Chunk 6
+Clinical Context:
+Pain from a heart attack may spread from the chest to the arm, jaw, neck, or back.
+
+Doctor Action Steps:
+1. Identify radiation of chest pain.
+2. Assess patient breathing and circulation.
+3. Order immediate ECG.
+4. Administer aspirin if appropriate.
+5. Prepare for emergency cardiac treatment.
+
+Emergency Level: HIGH
+
+
+Chunk 7
+Clinical Context:
+Shortness of breath can occur when the heart cannot pump enough oxygenated blood to the body.
+
+Doctor Action Steps:
+1. Evaluate respiratory distress.
+2. Monitor oxygen saturation.
+3. Provide supplemental oxygen if necessary.
+4. Assess cardiac rhythm.
+5. Prepare for urgent cardiac evaluation.
+
+Emergency Level: HIGH
+
+
+Chunk 8
+Clinical Context:
+Sweating, dizziness, and nausea may occur during a heart attack due to reduced blood flow to the heart.
+
+Doctor Action Steps:
+1. Assess patient consciousness.
+2. Monitor vital signs continuously.
+3. Evaluate for cardiac ischemia.
+4. Perform ECG immediately.
+5. Prepare for emergency treatment.
+
+Emergency Level: HIGH
+
+
+Chunk 9
+Clinical Context:
+Nitroglycerin helps relieve angina by widening blood vessels and improving blood flow to the heart.
+
+Doctor Action Steps:
+1. Confirm patient has angina symptoms.
+2. Administer nitroglycerin under the tongue.
+3. Monitor blood pressure.
+4. Reassess chest pain after 5 minutes.
+5. Repeat dose if symptoms persist.
+
+Emergency Level: HIGH
+
+
+Chunk 10
+Clinical Context:
+If chest pain continues after nitroglycerin, it may indicate a heart attack requiring emergency care.
+
+Doctor Action Steps:
+1. Reassess chest pain severity.
+2. Activate emergency medical response.
+3. Monitor heart rhythm.
+4. Prepare for advanced cardiac care.
+5. Transport patient to hospital.
+
+Emergency Level: HIGH
+
+
+Chunk 11
+Clinical Context:
+A heart attack occurs when a coronary artery becomes blocked by a blood clot.
+
+Doctor Action Steps:
+1. Identify symptoms of myocardial infarction.
+2. Perform ECG testing immediately.
+3. Check cardiac enzyme levels.
+4. Administer aspirin if indicated.
+5. Prepare for reperfusion therapy.
+
+Emergency Level: HIGH
+
+
+Chunk 12
+Clinical Context:
+Plaque rupture inside coronary arteries can trigger clot formation and complete artery blockage.
+
+Doctor Action Steps:
+1. Assess patient chest pain symptoms.
+2. Perform immediate cardiac evaluation.
+3. Order ECG and blood tests.
+4. Administer emergency medications.
+5. Prepare patient for cardiac intervention.
+
+Emergency Level: HIGH
+
+
+Chunk 13
+Clinical Context:
+Heart attacks may occur suddenly when blood supply to the heart muscle stops.
+
+Doctor Action Steps:
+1. Assess patient responsiveness.
+2. Monitor heart rhythm.
+3. Provide oxygen therapy.
+4. Initiate emergency treatment protocol.
+5. Prepare for hospital admission.
+
+Emergency Level: HIGH
+
+
+Chunk 14
+Clinical Context:
+Sudden cardiac arrest occurs when the heart stops beating effectively and blood flow to the brain stops.
+
+Doctor Action Steps:
+1. Check patient responsiveness.
+2. Call emergency services immediately.
+3. Begin CPR.
+4. Use automated external defibrillator if available.
+5. Continue resuscitation until help arrives.
+
+Emergency Level: CRITICAL
+
+
+Chunk 15
+Clinical Context:
+Cardiac arrest can lead to death within minutes if blood flow is not restored quickly.
+
+Doctor Action Steps:
+1. Check pulse and breathing.
+2. Initiate cardiopulmonary resuscitation.
+3. Use defibrillator if available.
+4. Continue CPR cycles.
+5. Prepare for advanced life support.
+
+Emergency Level: CRITICAL
+
+
+Chunk 16
+Clinical Context:
+Heart attack symptoms can include pressure or squeezing pain in the chest lasting more than several minutes.
+
+Doctor Action Steps:
+1. Evaluate chest pain duration.
+2. Perform ECG testing.
+3. Administer aspirin.
+4. Monitor patient condition.
+5. Prepare for emergency cardiac treatment.
+
+Emergency Level: HIGH
+
+
+Chunk 17
+Clinical Context:
+Fainting or loss of consciousness may occur during severe heart attack or cardiac arrest.
+
+Doctor Action Steps:
+1. Assess airway and breathing.
+2. Check pulse.
+3. Initiate CPR if necessary.
+4. Monitor oxygen levels.
+5. Activate emergency medical services.
+
+Emergency Level: CRITICAL
+
+
+Chunk 18
+Clinical Context:
+Women may experience different heart attack symptoms such as fatigue, nausea, and dizziness.
+
+Doctor Action Steps:
+1. Assess atypical symptoms.
+2. Evaluate cardiac risk factors.
+3. Perform ECG screening.
+4. Monitor vital signs.
+5. Refer for emergency evaluation.
+
+Emergency Level: HIGH
+
+
+Chunk 19
+Clinical Context:
+Silent myocardial infarction occurs when a heart attack happens without noticeable symptoms.
+
+Doctor Action Steps:
+1. Review patient medical history.
+2. Perform ECG screening.
+3. Conduct blood tests for cardiac markers.
+4. Evaluate heart function.
+5. Initiate appropriate treatment.
+
+Emergency Level: HIGH
+
+
+Chunk 20
+Clinical Context:
+Recurring chest pain during activity may be an early warning sign of heart attack.
+
+Doctor Action Steps:
+1. Assess chest pain triggers.
+2. Monitor patient heart rhythm.
+3. Evaluate oxygen levels.
+4. Order cardiac stress testing.
+5. Plan further treatment.
+
+Emergency Level: HIGH
+
+
+Chunk 21
+Clinical Context:
+Chest X‑ray helps evaluate the size and shape of the heart and detect lung conditions.
+
+Doctor Action Steps:
+1. Order chest X‑ray imaging.
+2. Evaluate heart size and lung condition.
+3. Assess for fluid buildup.
+4. Interpret results with clinical symptoms.
+5. Plan further cardiac testing.
+
+Emergency Level: MEDICAL
+
+
+Chunk 22
+Clinical Context:
+Blood tests can detect cardiac damage markers released during heart attack.
+
+Doctor Action Steps:
+1. Collect blood sample.
+2. Test for cardiac biomarkers.
+3. Evaluate enzyme levels.
+4. Monitor results over time.
+5. Adjust treatment accordingly.
+
+Emergency Level: HIGH
+
+
+Chunk 23
+Clinical Context:
+Electrocardiogram records the electrical activity of the heart.
+
+Doctor Action Steps:
+1. Attach ECG electrodes.
+2. Record heart rhythm.
+3. Identify abnormal patterns.
+4. Detect heart attack damage.
+5. Plan further treatment.
+
+Emergency Level: HIGH
+
+
+Chunk 24
+Clinical Context:
+Echocardiography uses ultrasound waves to visualize heart structure and function.
+
+Doctor Action Steps:
+1. Perform echocardiogram imaging.
+2. Evaluate heart pumping function.
+3. Identify damaged heart muscle.
+4. Assess valve function.
+5. Determine treatment plan.
+
+Emergency Level: MEDICAL
+
+
+Chunk 25
+Clinical Context:
+Exercise stress tests evaluate heart performance during physical activity.
+
+Doctor Action Steps:
+1. Monitor heart rate during exercise.
+2. Assess blood pressure changes.
+3. Identify abnormal heart rhythms.
+4. Evaluate blood flow to heart muscle.
+5. Determine safe activity levels.
+
+Emergency Level: MEDICAL
+
+
+Chunk 26
+Clinical Context:
+Cardiac catheterization allows doctors to visualize coronary artery blockages.
+
+Doctor Action Steps:
+1. Insert catheter through artery.
+2. Guide catheter to coronary arteries.
+3. Inject contrast dye.
+4. Identify arterial blockages.
+5. Plan treatment procedure.
+
+Emergency Level: HIGH
+
+
+Chunk 27
+Clinical Context:
+Coronary angiography provides detailed images of heart blood vessels.
+
+Doctor Action Steps:
+1. Perform catheter insertion.
+2. Inject contrast dye.
+3. Capture X‑ray images.
+4. Identify artery narrowing.
+5. Plan intervention.
+
+Emergency Level: HIGH
+
+
+Chunk 28
+Clinical Context:
+Nuclear cardiac testing evaluates blood flow and heart muscle damage.
+
+Doctor Action Steps:
+1. Inject radioactive tracer.
+2. Perform heart imaging.
+3. Assess blood flow patterns.
+4. Identify damaged tissue.
+5. Evaluate treatment effectiveness.
+
+Emergency Level: MEDICAL
+
+
+Chunk 29
+Clinical Context:
+Angioplasty is a procedure used to open blocked coronary arteries.
+
+Doctor Action Steps:
+1. Insert balloon catheter.
+2. Position catheter at blockage.
+3. Inflate balloon to widen artery.
+4. Restore blood flow.
+5. Monitor patient recovery.
+
+Emergency Level: HIGH
+
+
+Chunk 30
+Clinical Context:
+Coronary stents are used to keep arteries open after angioplasty.
+
+Doctor Action Steps:
+1. Deploy stent in narrowed artery.
+2. Ensure proper stent placement.
+3. Restore blood circulation.
+4. Monitor for complications.
+5. Continue cardiac care.
+
+Emergency Level: HIGH
+
+
+Chunk 31
+Clinical Context:
+Coronary artery bypass surgery restores blood flow around blocked arteries.
+
+Doctor Action Steps:
+1. Identify blocked arteries.
+2. Use graft vessel for bypass.
+3. Restore blood flow to heart muscle.
+4. Monitor heart function.
+5. Begin postoperative care.
+
+Emergency Level: HIGH
+
+
+Chunk 32
+Clinical Context:
+Cardiac rehabilitation helps patients recover after heart attack.
+
+Doctor Action Steps:
+1. Evaluate patient physical condition.
+2. Develop rehabilitation plan.
+3. Monitor exercise tolerance.
+4. Educate patient about heart health.
+5. Continue follow‑up care.
+
+Emergency Level: RECOVERY
+
+
+Chunk 33
+Clinical Context:
+Managing risk factors helps prevent future heart attacks.
+
+Doctor Action Steps:
+1. Identify modifiable risk factors.
+2. Control blood pressure.
+3. Manage cholesterol levels.
+4. Encourage healthy lifestyle.
+5. Schedule follow‑up monitoring.
+
+Emergency Level: PREVENTION
+
+
+Chunk 34
+Clinical Context:
+Smoking significantly increases risk of coronary artery disease.
+
+Doctor Action Steps:
+1. Assess smoking history.
+2. Counsel patient about cessation.
+3. Provide nicotine replacement therapy if needed.
+4. Monitor cardiovascular risk.
+5. Encourage lifestyle changes.
+
+Emergency Level: PREVENTION
+
+
+Chunk 35
+Clinical Context:
+High cholesterol contributes to plaque buildup in coronary arteries.
+
+Doctor Action Steps:
+1. Check lipid profile.
+2. Assess cardiovascular risk.
+3. Prescribe cholesterol‑lowering medication.
+4. Encourage dietary changes.
+5. Monitor treatment response.
+
+Emergency Level: PREVENTION
+
+
+Chunk 36
+Clinical Context:
+High blood pressure increases strain on the heart and arteries.
+
+Doctor Action Steps:
+1. Measure blood pressure.
+2. Assess cardiovascular risk.
+3. Initiate antihypertensive therapy.
+4. Encourage lifestyle changes.
+5. Monitor blood pressure regularly.
+
+Emergency Level: PREVENTION
+
+
+Chunk 37
+Clinical Context:
+Diabetes increases risk of coronary artery disease and heart attack.
+
+Doctor Action Steps:
+1. Evaluate blood glucose levels.
+2. Manage diabetes treatment.
+3. Monitor cardiovascular risk.
+4. Encourage healthy diet and exercise.
+5. Schedule regular follow‑ups.
+
+Emergency Level: PREVENTION
+
+
+Chunk 38
+Clinical Context:
+Obesity and physical inactivity increase risk of heart disease.
+
+Doctor Action Steps:
+1. Assess patient BMI.
+2. Evaluate lifestyle habits.
+3. Encourage physical activity.
+4. Develop weight management plan.
+5. Monitor cardiovascular health.
+
+Emergency Level: PREVENTION
+
+
+Chunk 39
+Clinical Context:
+Regular monitoring helps detect heart disease early.
+
+Doctor Action Steps:
+1. Schedule routine checkups.
+2. Monitor heart rhythm.
+3. Evaluate blood pressure.
+4. Perform periodic cardiac testing.
+5. Adjust treatment plans.
+
+Emergency Level: MEDICAL
+
+
+Chunk 40
+Clinical Context:
+Early recognition of heart attack symptoms can save lives.
+
+Doctor Action Steps:
+1. Recognize warning symptoms.
+2. Call emergency services immediately.
+3. Administer aspirin if appropriate.
+4. Begin emergency treatment.
+5. Transport patient to cardiac care center.
+
+Emergency Level: CRITICAL

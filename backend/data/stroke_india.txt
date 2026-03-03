@@ -1,0 +1,520 @@
+Chunk 1
+Clinical Context:
+For every minute a stroke goes untreated, the brain loses 1.9 million cells. Immediate care at a capable stroke center can drastically improve outcomes.
+
+Doctor Action Steps:
+1. Administer alteplase if within therapeutic window.
+2. Record exact symptom onset time.
+3. Check blood glucose and oxygen saturation.
+4. Monitor patient closely for intracranial bleeding.
+5. Perform FAST neurological assessment.
+
+Emergency Level: HIGH
+
+Chunk 2
+Clinical Context:
+A stroke occurs when blood flow to a part of the brain is interrupted, either due to a blocked artery (ischemic stroke) or a ruptured blood vessel (hemorrhagic stroke). In the context of the PDF, Acute Ischemic Stroke (AIS) is emphasized — this is the most common type, caused by obstruction of cerebral arteries, leading to brain tissue damage due to lack of oxygen.
+
+Doctor Action Steps:
+1. Ensure blood pressure is below 185/110 mmHg before rtPA.
+2. Order urgent CT scan to differentiate ischemic vs hemorrhagic stroke.
+3. Record exact symptom onset time.
+4. Perform FAST neurological assessment.
+5. Assess airway, breathing, and circulation.
+
+Emergency Level: HIGH
+
+Chunk 3
+Clinical Context:
+When this happens, brain cells begin to die within minutes. As per the TOAST classification, ischemic stroke is categorized into Large-Artery Atherosclerosis (LAA) Cardioembolic Stroke (CE) Small-Vessel Disease (SVD) / Lacunar Stroke Stroke of Other Determined Etiology (e.g., vasculitis, dissection) Stroke of Undetermined Etiology (Cryptogenic) Each type has unique causes, such as atherosclerosis, heart disease (especially atrial fibrillation), or small vessel damage due to hypertension or diabetes.
+
+Doctor Action Steps:
+1. Order lipid profile and blood glucose tests.
+2. Start preventive medications if necessary.
+3. Evaluate patient history for hypertension and diabetes.
+4. Educate patient about stroke risk reduction.
+5. Assess smoking and alcohol use.
+
+Emergency Level: HIGH
+
+Chunk 4
+Clinical Context:
+Other types of stroke, each caused by different problems affecting blood flow to the brain: Ischemic Stroke (Most Common – ~87% of strokes): – A blood clot or narrowed artery blocks blood flow to the brain. Subtypes: Thrombotic stroke: Clot forms in a blood vessel inside the brain.
+
+Doctor Action Steps:
+1. Transfer patient to stroke-ready hospital immediately.
+2. Evaluate eligibility for IV thrombolysis.
+3. Order urgent CT scan to differentiate ischemic vs hemorrhagic stroke.
+4. Monitor patient closely for intracranial bleeding.
+5. Assess airway, breathing, and circulation.
+
+Emergency Level: HIGH
+
+Chunk 5
+Clinical Context:
+Embolic stroke: Clot or debris forms elsewhere (e.g., heart) and travels to the brain. Hemorrhagic Stroke: – A blood vessel in the brain ruptures, causing bleeding into or around the brain.
+
+Doctor Action Steps:
+1. Administer alteplase if within therapeutic window.
+2. Evaluate eligibility for IV thrombolysis.
+3. Monitor patient closely for intracranial bleeding.
+4. Assess airway, breathing, and circulation.
+5. Ensure blood pressure is below 185/110 mmHg before rtPA.
+
+Emergency Level: HIGH
+
+Chunk 6
+Clinical Context:
+Subtypes: Intracerebral hemorrhage: Bleeding within the brain tissue. Subarachnoid hemorrhage: Bleeding into the space between the brain and skull (often from an aneurysm rupture).
+
+Doctor Action Steps:
+1. Transfer patient to stroke-ready hospital immediately.
+2. Perform FAST neurological assessment.
+3. Monitor patient closely for intracranial bleeding.
+4. Check blood glucose and oxygen saturation.
+5. Ensure blood pressure is below 185/110 mmHg before rtPA.
+
+Emergency Level: MEDICAL
+
+Chunk 7
+Clinical Context:
+Transient Ischemic Attack (TIA) “Mini-Stroke” Cause: A temporary blockage of blood flow to the brain. No permanent damage, but symptoms mimic stroke and resolve within minutes to hours.
+
+Doctor Action Steps:
+1. Assess airway, breathing, and circulation.
+2. Record exact symptom onset time.
+3. Perform FAST neurological assessment.
+4. Transfer patient to stroke-ready hospital immediately.
+5. Check blood glucose and oxygen saturation.
+
+Emergency Level: HIGH
+
+Chunk 8
+Clinical Context:
+Warning Sign: Indicates a high risk of future full stroke. Needs urgent medical attention.
+
+Doctor Action Steps:
+1. Assess smoking and alcohol use.
+2. Educate patient about stroke risk reduction.
+3. Evaluate patient history for hypertension and diabetes.
+4. Start preventive medications if necessary.
+5. Order lipid profile and blood glucose tests.
+
+Emergency Level: HIGH
+
+Chunk 9
+Clinical Context:
+Risk factors of stroke: modifiable and non-modifiable risk factors Non-modifiable: Age (>65), gender (male predominance), ethnicity, genetics, low birth weight, Previous Stroke or TIA. Modifiable: Hypertension (most common) Diabetes Mellitus Atrial Fibrillation Smoking and alcohol Dyslipidemia Obesity and sedentary lifestyle Heart disease (especially AF and valvular diseases) Metabolic syndrome Dietary factors and drug abuse.
+
+Doctor Action Steps:
+1. Assess smoking and alcohol use.
+2. Educate patient about stroke risk reduction.
+3. Start preventive medications if necessary.
+4. Evaluate patient history for hypertension and diabetes.
+5. Order lipid profile and blood glucose tests.
+
+Emergency Level: HIGH
+
+Chunk 10
+Clinical Context:
+Poor Diet Physical Inactivity High Cholesterol Who all can get affected by stroke? Elderly people (≥65 years) are most commonly affected.
+
+Doctor Action Steps:
+1. Evaluate eligibility for IV thrombolysis.
+2. Assess airway, breathing, and circulation.
+3. Administer alteplase if within therapeutic window.
+4. Monitor patient closely for intracranial bleeding.
+5. Record exact symptom onset time.
+
+Emergency Level: HIGH
+
+Chunk 11
+Clinical Context:
+However, the document also highlights a rising incidence in younger adults (<55 years) due to smoking, obesity, and lifestyle changes. Women, particularly post-menopausal, have increased stroke incidence due to loss of estrogen’s vascular protective effect.
+
+Doctor Action Steps:
+1. Record exact symptom onset time.
+2. Assess airway, breathing, and circulation.
+3. Ensure blood pressure is below 185/110 mmHg before rtPA.
+4. Administer alteplase if within therapeutic window.
+5. Check blood glucose and oxygen saturation.
+
+Emergency Level: HIGH
+
+Chunk 12
+Clinical Context:
+People with Chronic Diseases those with: High blood pressure (hypertension), Diabetes, High cholesterol, Heart diseases (e.g., atrial fibrillation), Obesity, Are at a much higher risk. Smokers and Alcohol Users: Tobacco and excessive alcohol damage blood vessels and increase blood pressure and clot formation.
+
+Doctor Action Steps:
+1. Evaluate patient history for hypertension and diabetes.
+2. Assess smoking and alcohol use.
+3. Start preventive medications if necessary.
+4. Order lipid profile and blood glucose tests.
+5. Educate patient about stroke risk reduction.
+
+Emergency Level: MODERATE
+
+Chunk 13
+Clinical Context:
+People with a Sedentary Lifestyle: Lack of physical activity increases risk of stroke-related conditions like obesity and high BP. People with a Family History of Stroke: – Genetics plays a role.
+
+Doctor Action Steps:
+1. Assess smoking and alcohol use.
+2. Order lipid profile and blood glucose tests.
+3. Evaluate patient history for hypertension and diabetes.
+4. Start preventive medications if necessary.
+5. Educate patient about stroke risk reduction.
+
+Emergency Level: HIGH
+
+Chunk 14
+Clinical Context:
+If close relatives had a stroke, your risk is higher. Children (Rare but Possible): -Though rare, strokes can also occur in newborns and children, often due to congenital heart defects, blood disorders (like sickle cell disease), or infections.
+
+Doctor Action Steps:
+1. Start preventive medications if necessary.
+2. Educate patient about stroke risk reduction.
+3. Order lipid profile and blood glucose tests.
+4. Evaluate patient history for hypertension and diabetes.
+5. Assess smoking and alcohol use.
+
+Emergency Level: HIGH
+
+Chunk 15
+Clinical Context:
+What is the treatment: Stroke treatment depends on the type of stroke, time of onset, and the patient’s condition. The goal is to restore blood flow to the brain quickly, minimize brain damage, and improve recovery outcomes.
+
+Doctor Action Steps:
+1. Perform FAST neurological assessment.
+2. Check blood glucose and oxygen saturation.
+3. Assess airway, breathing, and circulation.
+4. Transfer patient to stroke-ready hospital immediately.
+5. Ensure blood pressure is below 185/110 mmHg before rtPA.
+
+Emergency Level: HIGH
+
+Chunk 16
+Clinical Context:
+Acute Stroke Treatment Acute stroke management is a medical emergency. Every minute counts — millions of brain cells die each minute during a stroke.
+
+Doctor Action Steps:
+1. Evaluate eligibility for IV thrombolysis.
+2. Perform FAST neurological assessment.
+3. Assess airway, breathing, and circulation.
+4. Order urgent CT scan to differentiate ischemic vs hemorrhagic stroke.
+5. Record exact symptom onset time.
+
+Emergency Level: HIGH
+
+Chunk 17
+Clinical Context:
+Hence, treatment focuses on reperfusion therapy, where the blocked blood vessel is opened as soon as possible. There are two main evidence-based treatments for Acute Ischemic Stroke (AIS): Thrombolysis (Intravenous Thrombolytic Therapy (IV tPA)) Thrombolysis involves the use of a clot-dissolving drug to break down the blood clot blocking the brain artery.
+
+Doctor Action Steps:
+1. Order urgent CT scan to differentiate ischemic vs hemorrhagic stroke.
+2. Ensure blood pressure is below 185/110 mmHg before rtPA.
+3. Evaluate eligibility for IV thrombolysis.
+4. Monitor patient closely for intracranial bleeding.
+5. Administer alteplase if within therapeutic window.
+
+Emergency Level: HIGH
+
+Chunk 18
+Clinical Context:
+The drug used is usually: rtPA (recombinant tissue plasminogen activator) — commonly Alteplase. Must be given within 4.5 hours of symptom onset.
+
+Doctor Action Steps:
+1. Perform FAST neurological assessment.
+2. Record exact symptom onset time.
+3. Transfer patient to stroke-ready hospital immediately.
+4. Assess airway, breathing, and circulation.
+5. Check blood glucose and oxygen saturation.
+
+Emergency Level: MEDICAL
+
+Chunk 19
+Clinical Context:
+Earlier administration improves outcomes significantly. The rtPA activates plasminogen in the blood, converting it to plasmin.
+
+Doctor Action Steps:
+1. Evaluate eligibility for IV thrombolysis.
+2. Ensure blood pressure is below 185/110 mmHg before rtPA.
+3. Administer alteplase if within therapeutic window.
+4. Order urgent CT scan to differentiate ischemic vs hemorrhagic stroke.
+5. Monitor patient closely for intracranial bleeding.
+
+Emergency Level: MEDICAL
+
+Chunk 20
+Clinical Context:
+Plasmin breaks down fibrin, the main component of blood clots. A patient can receive IV thrombolysis if: o Stroke onset is within 4.5 hour.
+
+Doctor Action Steps:
+1. Evaluate eligibility for IV thrombolysis.
+2. Ensure blood pressure is below 185/110 mmHg before rtPA.
+3. Administer alteplase if within therapeutic window.
+4. Order urgent CT scan to differentiate ischemic vs hemorrhagic stroke.
+5. Monitor patient closely for intracranial bleeding.
+
+Emergency Level: HIGH
+
+Chunk 21
+Clinical Context:
+o No recent surgery or bleeding disorder. o Blood pressure is controlled (≤185/110 mmHg).
+
+Doctor Action Steps:
+1. Transfer patient to stroke-ready hospital immediately.
+2. Record exact symptom onset time.
+3. Perform FAST neurological assessment.
+4. Administer alteplase if within therapeutic window.
+5. Monitor patient closely for intracranial bleeding.
+
+Emergency Level: MEDICAL
+
+Chunk 22
+Clinical Context:
+Benefits: o Increases chance of complete or partial recovery o Reduces the size of the stroke and brain damage o Improves chances of walking independently again Risks: o Bleeding in the brain (symptomatic intracranial hemorrhage) o Should be administered only in stroke-ready hospitals Thrombolysis (Intravenous Thrombolytic Therapy (IV tPA)) Mechanical thrombectomy is a minimally invasive surgical procedure where a blood clot is physically removed from the brain artery using a catheter-based device. Ideally within 6 hours of stroke onset.
+
+Doctor Action Steps:
+1. Record exact symptom onset time.
+2. Check blood glucose and oxygen saturation.
+3. Transfer patient to stroke-ready hospital immediately.
+4. Assess airway, breathing, and circulation.
+5. Perform FAST neurological assessment.
+
+Emergency Level: HIGH
+
+Chunk 23
+Clinical Context:
+Can be done up to 24 hours in selected patients (based on advanced imaging showing salvageable brain tissue). A catheter is inserted through a groin or wrist artery.
+
+Doctor Action Steps:
+1. Administer alteplase if within therapeutic window.
+2. Assess airway, breathing, and circulation.
+3. Ensure blood pressure is below 185/110 mmHg before rtPA.
+4. Monitor patient closely for intracranial bleeding.
+5. Record exact symptom onset time.
+
+Emergency Level: MEDICAL
+
+Chunk 24
+Clinical Context:
+It is navigated to the brain artery where the clot is located. A stent retriever or suction device grabs or aspirates the clot.
+
+Doctor Action Steps:
+1. Check blood glucose and oxygen saturation.
+2. Order urgent CT scan to differentiate ischemic vs hemorrhagic stroke.
+3. Ensure blood pressure is below 185/110 mmHg before rtPA.
+4. Record exact symptom onset time.
+5. Perform FAST neurological assessment.
+
+Emergency Level: MEDICAL
+
+Chunk 25
+Clinical Context:
+Blood flow is restored to the affected brain area. Benefits: o Highly effective in restoring blood flow in major strokes o Increases chance of a good functional outcome o Reduces risk of death and long-term disability Works even when IV tPA is contraindicated or fails Risks: o Bleeding at catheter site or in the brain o Blood vessel injury o May not be successful in all patients o Requires specialized stroke intervention team and hospital infrastructure Supportive Care Supportive care is the foundation of stroke management, especially in the early hours and days after stroke onset.
+
+Doctor Action Steps:
+1. Assess smoking and alcohol use.
+2. Educate patient about stroke risk reduction.
+3. Order lipid profile and blood glucose tests.
+4. Start preventive medications if necessary.
+5. Evaluate patient history for hypertension and diabetes.
+
+Emergency Level: HIGH
+
+Chunk 26
+Clinical Context:
+While advanced treatments like thrombolysis and thrombectomy target the clot directly, supportive care ensures the patient remains stable and safe, preventing complications and improving recovery chances. Thrombolysis (Intravenous Thrombolytic Therapy (IV tPA)) Airway and Breathing Patients with decreased consciousness or impaired swallowing may need oxygen therapy or even mechanical ventilation to maintain oxygen supply to the brain.
+
+Doctor Action Steps:
+1. Evaluate eligibility for IV thrombolysis.
+2. Order urgent CT scan to differentiate ischemic vs hemorrhagic stroke.
+3. Ensure blood pressure is below 185/110 mmHg before rtPA.
+4. Administer alteplase if within therapeutic window.
+5. Monitor patient closely for intracranial bleeding.
+
+Emergency Level: HIGH
+
+Chunk 27
+Clinical Context:
+Oxygen saturation should be kept above 94%. Blood Pressure Management High blood pressure is common during stroke.
+
+Doctor Action Steps:
+1. Assess airway, breathing, and circulation.
+2. Administer alteplase if within therapeutic window.
+3. Check blood glucose and oxygen saturation.
+4. Order urgent CT scan to differentiate ischemic vs hemorrhagic stroke.
+5. Monitor patient closely for intracranial bleeding.
+
+Emergency Level: HIGH
+
+Chunk 28
+Clinical Context:
+For patients not eligible for thrombolysis, BP up to 220/120 mmHg may be allowed (permissive hypertension). For those receiving IV thrombolysis, BP must be reduced to ≤185/110 mmHg before treatment to reduce the risk of bleeding.
+
+Doctor Action Steps:
+1. Evaluate eligibility for IV thrombolysis.
+2. Monitor patient closely for intracranial bleeding.
+3. Administer alteplase if within therapeutic window.
+4. Order urgent CT scan to differentiate ischemic vs hemorrhagic stroke.
+5. Ensure blood pressure is below 185/110 mmHg before rtPA.
+
+Emergency Level: HIGH
+
+Chunk 29
+Clinical Context:
+Blood Sugar Control Both hypoglycemia (<60 mg/dL) and hyperglycemia (>180 mg/dL) can worsen brain injury. Blood sugar should be maintained between 140–180 mg/dL using insulin if needed.
+
+Doctor Action Steps:
+1. Evaluate eligibility for IV thrombolysis.
+2. Assess airway, breathing, and circulation.
+3. Check blood glucose and oxygen saturation.
+4. Record exact symptom onset time.
+5. Order urgent CT scan to differentiate ischemic vs hemorrhagic stroke.
+
+Emergency Level: MEDICAL
+
+Chunk 30
+Clinical Context:
+Fever Control Elevated temperature increases brain injury, so antipyretics (like paracetamol) should be used to manage fever. Hydration and Nutrition IV fluids (e.g., normal saline) may be given carefully to prevent dehydration without causing fluid overload.
+
+Doctor Action Steps:
+1. Perform FAST neurological assessment.
+2. Monitor patient closely for intracranial bleeding.
+3. Ensure blood pressure is below 185/110 mmHg before rtPA.
+4. Administer alteplase if within therapeutic window.
+5. Transfer patient to stroke-ready hospital immediately.
+
+Emergency Level: MEDICAL
+
+Chunk 31
+Clinical Context:
+Nutrition via feeding tubes may be needed for patients with swallowing difficulty. Infection Prevention Stroke patients are at risk of pneumonia, urinary infections, and bedsores.
+
+Doctor Action Steps:
+1. Assess smoking and alcohol use.
+2. Evaluate patient history for hypertension and diabetes.
+3. Educate patient about stroke risk reduction.
+4. Start preventive medications if necessary.
+5. Order lipid profile and blood glucose tests.
+
+Emergency Level: HIGH
+
+Chunk 32
+Clinical Context:
+Early mobilization and proper nursing care are crucial. Seizure Management Seizures may occur post-stroke.
+
+Doctor Action Steps:
+1. Assess airway, breathing, and circulation.
+2. Check blood glucose and oxygen saturation.
+3. Ensure blood pressure is below 185/110 mmHg before rtPA.
+4. Record exact symptom onset time.
+5. Administer alteplase if within therapeutic window.
+
+Emergency Level: HIGH
+
+Chunk 33
+Clinical Context:
+If they do, antiepileptic drugs may be started. Antiplatelet/Anticoagulant therapy These therapies are critical for preventing further clot formation and reducing the risk of recurrence, depending on the type and cause of stroke.
+
+Doctor Action Steps:
+1. Start preventive medications if necessary.
+2. Educate patient about stroke risk reduction.
+3. Assess smoking and alcohol use.
+4. Evaluate patient history for hypertension and diabetes.
+5. Order lipid profile and blood glucose tests.
+
+Emergency Level: HIGH
+
+Chunk 34
+Clinical Context:
+Antiplatelet Therapy: Indicated for: Non-cardioembolic ischemic stroke (e.g., caused by large artery atherosclerosis or small vessel disease). Common drugs: Aspirin (160–325 mg/day), started within 24–48 hours of symptom onset.
+
+Doctor Action Steps:
+1. Check blood glucose and oxygen saturation.
+2. Assess airway, breathing, and circulation.
+3. Transfer patient to stroke-ready hospital immediately.
+4. Perform FAST neurological assessment.
+5. Record exact symptom onset time.
+
+Emergency Level: HIGH
+
+Chunk 35
+Clinical Context:
+In high-risk or minor strokes, dual antiplatelet therapy (DAPT) using aspirin and clopidogrel for 21 days can reduce early recurrence. Long-term: Usually, single antiplatelet therapy is continued for long-term prevention.
+
+Doctor Action Steps:
+1. Educate patient about stroke risk reduction.
+2. Start preventive medications if necessary.
+3. Assess smoking and alcohol use.
+4. Order lipid profile and blood glucose tests.
+5. Evaluate patient history for hypertension and diabetes.
+
+Emergency Level: HIGH
+
+Chunk 36
+Clinical Context:
+Anticoagulant Therapy: Indicated for: Cardioembolic strokes, especially due to atrial fibrillation (AF). Common drugs: Warfarin (requires INR monitoring), Direct Oral Anticoagulants (DOACs) like apixaban, rivaroxaban, or dabigatran.
+
+Doctor Action Steps:
+1. Check blood glucose and oxygen saturation.
+2. Record exact symptom onset time.
+3. Assess airway, breathing, and circulation.
+4. Administer alteplase if within therapeutic window.
+5. Order urgent CT scan to differentiate ischemic vs hemorrhagic stroke.
+
+Emergency Level: HIGH
+
+Chunk 37
+Clinical Context:
+Initiation timing: To avoid bleeding risk, anticoagulants are usually started 4–14 days after stroke, based on infarct size and bleeding risk (follow the “1-3-6-12 day rule”). Special considerations: Dose adjustment is necessary in elderly or those with kidney disease.
+
+Doctor Action Steps:
+1. Assess smoking and alcohol use.
+2. Order lipid profile and blood glucose tests.
+3. Start preventive medications if necessary.
+4. Educate patient about stroke risk reduction.
+5. Evaluate patient history for hypertension and diabetes.
+
+Emergency Level: HIGH
+
+Chunk 38
+Clinical Context:
+DOACs are preferred over warfarin in most elderly patients due to fewer interactions and lower risk of brain bleeding. Secondary Prevention Once the immediate danger is controlled, the focus shifts to preventing another stroke, which is called secondary prevention.
+
+Doctor Action Steps:
+1. Evaluate patient history for hypertension and diabetes.
+2. Order lipid profile and blood glucose tests.
+3. Start preventive medications if necessary.
+4. Educate patient about stroke risk reduction.
+5. Assess smoking and alcohol use.
+
+Emergency Level: HIGH
+
+Chunk 39
+Clinical Context:
+This is a lifelong process involving medications, lifestyle changes, and monitoring. Key strategies include: Blood Pressure Control: – Target BP: <140/90 mmHg Common medications: ACE inhibitors, angiotensin receptor blockers (ARBs), calcium channel blockers, diuretics Cholesterol Management: – High-dose statins (e.g., Atorvastatin 40–80 mg) are given to lower LDL cholesterol <70 mg/dL Statins also stabilize plaques and reduce inflammation Diabetes Control: – Maintain fasting glucose and HbA1c in target range Use metformin or insulin if needed under medical supervision Antiplatelet or Anticoagulant Continuation: – Based on stroke type and individual risk profile Lifelong aspirin or DOACs may be continued Lifestyle Modifications Quit smoking and alcohol Regular physical activity (30 min/day, 5 days/week) Healthy diet: low in saturated fats and salt, high in fruits and vegetables (e.g., Mediterranean diet) Maintain healthy weight and waist circumference Monitoring and Follow-up: – Regular visits to monitor BP, cholesterol, blood sugar, and medication side effect.
+
+Doctor Action Steps:
+1. Check blood glucose and oxygen saturation.
+2. Record exact symptom onset time.
+3. Transfer patient to stroke-ready hospital immediately.
+4. Perform FAST neurological assessment.
+5. Assess airway, breathing, and circulation.
+
+Emergency Level: HIGH
+
+Chunk 40
+Clinical Context:
+Echocardiogram, ECG, and Holter monitoring may be done to detect hidden cardiac causes. Education and Family Awareness Teach patients and caregivers about warning signs of stroke (BEFAST) Encourage early hospital visits if symptoms recur D.
+
+Doctor Action Steps:
+1. Record exact symptom onset time.
+2. Check blood glucose and oxygen saturation.
+3. Transfer patient to stroke-ready hospital immediately.
+4. Assess airway, breathing, and circulation.
+5. Perform FAST neurological assessment.
+
+Emergency Level: HIGH
+

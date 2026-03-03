@@ -1,0 +1,35 @@
+fastapi
+uvicorn[standard]
+
+# Async support
+asyncio
+aiohttp
+
+# Redis cache
+redis
+
+# RAG / Vector DB
+chromadb
+sentence-transformers
+
+# LLM communication
+requests
+
+# Data validation
+pydantic
+
+# PDF processing
+pdfplumber
+pypdf
+
+# Scientific utilities
+numpy
+scikit-learn
+
+# Benchmark / testing
+locust
+pytest
+
+# Logging and config
+python-dotenv
+loguru
