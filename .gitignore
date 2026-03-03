@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Python environment files
+.env
+
+# ChromaDB local database
+chroma_db/
+
+# Redis dump files
+dump.rdb
+
+# Logs
+*.log
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Android build files
+android-app/.gradle/
+android-app/build/
+android-app/local.properties
+
+# Bytecode
+*.pyo
+*.pyd
+
+# Test cache
+.pytest_cache/
