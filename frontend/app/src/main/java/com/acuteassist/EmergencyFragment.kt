@@ -28,22 +28,68 @@ class EmergencyFragment : Fragment() {
         // Medical history fetched from DB — hardcoded here for now
         val patientHistory = "Diabetes Type 2 (HbA1c 8.2%, Metformin 500mg), Hypertension (Amlodipine 5mg), Asthma (mild)"
 
+//        btnAnalyze.setOnClickListener {
+//            val symptoms = etSymptoms.text.toString()
+//            if (symptoms.isBlank()) {
+//                Toast.makeText(context, "Please enter symptoms", Toast.LENGTH_SHORT).show()
+//                return@setOnClickListener
+//            }
+//            tvGuidance.text = "⏳ Analyzing with Ollama AI..."
+//            queryOllama(symptoms, patientHistory) { result ->
+//                activity?.runOnUiThread { tvGuidance.text = result }
+//            }
+//        }
         btnAnalyze.setOnClickListener {
             val symptoms = etSymptoms.text.toString()
+
             if (symptoms.isBlank()) {
                 Toast.makeText(context, "Please enter symptoms", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            tvGuidance.text = "⏳ Analyzing with Ollama AI..."
-            queryOllama(symptoms, patientHistory) { result ->
-                activity?.runOnUiThread { tvGuidance.text = result }
+
+            tvGuidance.text = "⏳ Analyzing..."
+
+            callBackend(symptoms) { result ->
+                activity?.runOnUiThread {
+                    tvGuidance.text = result
+                }
             }
         }
 
-        btnRefresh.setOnClickListener {
-            tvGuidance.text = "⏳ Refreshing..."
-            queryOllama("Patient appears confused and diaphoretic", patientHistory) { result ->
-                activity?.runOnUiThread { tvGuidance.text = result }
+//        btnRefresh.setOnClickListener {
+//            tvGuidance.text = "⏳ Refreshing..."
+//            queryOllama("Patient appears confused and diaphoretic", patientHistory) { result ->
+//                activity?.runOnUiThread { tvGuidance.text = result }
+//            }
+//        }
+    }
+    private fun callBackend(symptoms: String, callback: (String) -> Unit) {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                val url = URL("http://10.0.2.2:8000/ai-triage")
+                val conn = url.openConnection() as HttpURLConnection
+
+                conn.requestMethod = "POST"
+                conn.setRequestProperty("Content-Type", "application/json")
+                conn.doOutput = true
+
+                val jsonBody = JSONObject().apply {
+                    put("symptoms", symptoms)
+                }.toString()
+
+                OutputStreamWriter(conn.outputStream).use {
+                    it.write(jsonBody)
+                }
+
+                val response = conn.inputStream.bufferedReader().readText()
+                val jsonResponse = JSONObject(response)
+
+                val result = jsonResponse.getString("response")
+
+                callback(result)
+
+            } catch (e: Exception) {
+                callback("⚠️ Backend not reachable.\n${e.message}")
             }
         }
     }
@@ -53,39 +99,39 @@ class EmergencyFragment : Fragment() {
      * Model: llama3 or any medical model you have pulled
      * Replace with your actual Ollama server IP if running on device
      */
-    private fun queryOllama(symptoms: String, history: String, callback: (String) -> Unit) {
-        CoroutineScope(Dispatchers.IO).launch {
-            try {
-                val prompt = """
-                    You are an emergency medical assistant AI.
-                    Patient Medical History: $history
-                    Current Symptoms: $symptoms
-                    
-                    Provide a numbered first-aid action list for the attending staff BEFORE the doctor arrives.
-                    Include critical warnings based on the patient's history (drug interactions, contraindications).
-                    Be concise. Max 8 steps. Use emoji bullets.
-                """.trimIndent()
-
-                val url = URL("http://10.0.2.2:11434/api/generate")
-                val conn = url.openConnection() as HttpURLConnection
-                conn.requestMethod = "POST"
-                conn.setRequestProperty("Content-Type", "application/json")
-                conn.doOutput = true
-
-                val body = JSONObject().apply {
-                    put("model", "llama3")
-                    put("prompt", prompt)
-                    put("stream", false)
-                }.toString()
-
-                OutputStreamWriter(conn.outputStream).use { it.write(body) }
-
-                val response = conn.inputStream.bufferedReader().readText()
-                val result = JSONObject(response).getString("response")
-                callback(result)
-            } catch (e: Exception) {
-                callback("⚠️ Could not reach Ollama. Make sure it's running at localhost:11434\n\nError: ${e.message}")
-            }
-        }
-    }
+//    private fun queryOllama(symptoms: String, history: String, callback: (String) -> Unit) {
+//        CoroutineScope(Dispatchers.IO).launch {
+//            try {
+//                val prompt = """
+//                    You are an emergency medical assistant AI.
+//                    Patient Medical History: $history
+//                    Current Symptoms: $symptoms
+//
+//                    Provide a numbered first-aid action list for the attending staff BEFORE the doctor arrives.
+//                    Include critical warnings based on the patient's history (drug interactions, contraindications).
+//                    Be concise. Max 8 steps. Use emoji bullets.
+//                """.trimIndent()
+//
+//                val url = URL("http://10.0.2.2:11434/api/generate")
+//                val conn = url.openConnection() as HttpURLConnection
+//                conn.requestMethod = "POST"
+//                conn.setRequestProperty("Content-Type", "application/json")
+//                conn.doOutput = true
+//
+//                val body = JSONObject().apply {
+//                    put("model", "llama3")
+//                    put("prompt", prompt)
+//                    put("stream", false)
+//                }.toString()
+//
+//                OutputStreamWriter(conn.outputStream).use { it.write(body) }
+//
+//                val response = conn.inputStream.bufferedReader().readText()
+//                val result = JSONObject(response).getString("response")
+//                callback(result)
+//            } catch (e: Exception) {
+//                callback("⚠️ Could not reach Ollama. Make sure it's running at localhost:11434\n\nError: ${e.message}")
+//            }
+//        }
+//    }
 }
