@@ -1,14 +1,25 @@
-from sqlalchemy.orm import Session
-from database.models import Hospital
+# database/db.py
 
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, declarative_base
 
-def create_hospital(db: Session, data: dict):
-    hospital = Hospital(**data)
-    db.add(hospital)
-    db.commit()
-    db.refresh(hospital)
-    return hospital
+DATABASE_URL = "sqlite:///./acuteassist.db"
 
+engine = create_engine(
+    DATABASE_URL,
+    connect_args={"check_same_thread": False}
+)
 
-def get_all_hospitals(db: Session):
-    return db.query(Hospital).all()
+SessionLocal = sessionmaker(
+    autocommit=False,
+    autoflush=False,
+    bind=engine
+)
+
+Base = declarative_base()
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
