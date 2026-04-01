@@ -1,306 +1,275 @@
 # CardioAid
-AcuteAssist – AI‑Powered Emergency Triage System
-AcuteAssist is an AI-assisted medical triage system that analyzes patient symptoms and generates structured emergency recommendations using Retrieval-Augmented Generation (RAG).
+# AcuteAssist
+
+AcuteAssist is an AI-assisted emergency triage system for government and NGO-run hospitals. It is designed to help doctors on emergency duty generate a short, relevant clinical summary from a patient’s symptoms, past history, and retrieved medical knowledge so they can act faster with less noise.
+
+The main idea is simple:
+
+1. take the patient’s current symptoms,
+2. retrieve only the most relevant medical context,
+3. send a compact prompt to a local LLM,
+4. return a structured triage response.
+
+This reduces unnecessary token usage and keeps the workflow more cost-efficient for low-budget healthcare settings.
+
+---
+
+## What the project currently does
+
+The repository currently contains:
+
+- an **Android app** built with Kotlin
+- a **FastAPI backend**
+- a **SQLite database**
+- a **ChromaDB knowledge base** for medical retrieval
+- a **local Ollama model** for triage generation
+- basic **patient, hospital, user, test, and audit** data models
+- initial scaffolding for **role-based access**, **Redis caching**, and **fragmented hospital history**
+
+---
+
+## Core workflow
+
+### Current triage flow
+- The doctor enters symptoms in the Android app.
+- The app sends a request to the backend endpoint `POST /ai-triage`.
+- The backend retrieves relevant medical context from ChromaDB.
+- The backend sends the symptoms plus retrieved context to a local LLM through Ollama.
+- The LLM returns a structured response with:
+  - `diagnosis`
+  - `emergency_level`
+  - `immediate_action`
+
+### Data flow in the repository
+- **Android app**: captures symptoms and displays the triage result
+- **FastAPI backend**: handles API requests
+- **SQLite**: stores patients, hospitals, medical tests, and users
+- **ChromaDB**: stores medical knowledge chunks
+- **Ollama**: runs the local model used for triage generation
+
+---
+
+## Key features implemented so far
+
+### 1. Android emergency triage UI
+The app includes:
+- login screen
+- patient screen
+- emergency triage screen
+- profile screen
+
+### 2. Backend triage endpoint
+The backend exposes an AI triage API that:
+- accepts symptom text
+- retrieves related medical knowledge
+- generates a concise emergency response
+
+### 3. Medical data model
+The backend already defines models for:
+- patients
+- hospitals
+- patient-hospital links
+- medical tests
+- audit logs
+- users
+
+### 4. Knowledge retrieval pipeline
+The repository includes scripts and services for:
+- PDF text extraction
+- text cleaning
+- chunking medical text
+- loading chunks into ChromaDB
+- retrieving top relevant chunks for a symptom query
+
+### 5. Early cost-control idea
+The project reduces prompt size by:
+- cleaning extracted text
+- selecting only relevant chunks
+- keeping the LLM prompt short and structured
+
+---
+
+## Repository structure
+
+```text
+AcuteAssist/
+├── backend/
+│   ├── app/
+│   ├── api/routes/
+│   ├── auth/
+│   ├── database/
+│   ├── data/
+│   ├── models/
+│   ├── services/
+│   └── tests/
+└── frontend/
+    └── app/
+```
+
+---
 
-The system integrates a vector medical knowledge base with a medical language model to assist in identifying possible emergency conditions and prioritizing care.
+## Backend components
 
-Problem Statement
-Emergency departments often face high patient loads and limited medical staff, which can delay the identification of critical conditions.
+### API routes
+- `auth_routes.py` — user registration and login
+- `patient_routes.py` — patient creation and listing
+- `hospital_routes.py` — hospital creation and linking
+- `test_routes.py` — medical test entry
+- `triage_routes.py` — triage by patient id
+- `ai_routes.py` — direct symptom-based AI triage
 
-Patients presenting symptoms such as chest pain, breathing difficulty, or neurological symptoms require rapid assessment to determine the urgency of medical attention.
+### Services
+- `rag_pipeline.py` — retrieval + LLM triage pipeline
+- `retrieval_service.py` — fetches relevant knowledge from ChromaDB
+- `llm_service.py` — sends prompts to Ollama
+- `pdf_extraction.py` — extracts text from PDFs
+- `chunking.py` — splits text into chunks
+- `cleaning_service.py` — cleans extracted text
+- `deterministic_filter.py` — extracts clinical markers from tests
+- `triage_service.py` — combines patient data, history, and retrieval logic
+- `redis_services.py` — basic Redis cache helpers
 
-However:
+### Database
+- `db.py` — SQLAlchemy setup using SQLite
+- `models.py` — database tables
+- repository files for patients, hospitals, users, tests, and audit logs
 
-Initial triage can be time‑consuming
+---
 
-Symptoms may be ambiguous or overlapping
+## Android app screens
 
-Early identification of life‑threatening conditions is critical
+### Login
+The login screen lets the user pick a role:
+- Doctor
+- Nurse
+- Admin
 
-There is a need for an AI-assisted triage system that can quickly analyze symptoms and suggest possible diagnoses with urgency levels.
+### Patient screen
+This screen currently shows a set of sample patient conditions and toggles. It is a prototype for medical history selection.
 
-Proposed Solution
-AcuteAssist provides an AI-driven triage assistant that:
+### Emergency screen
+This screen accepts symptoms and sends them to the backend triage API.
 
-Accepts patient symptoms from a mobile application.
+### Profile screen
+Basic sign-out flow.
 
-Retrieves relevant medical knowledge using vector search.
+---
 
-Uses a medical language model to analyze symptoms.
+## Tech stack
 
-Returns a structured triage recommendation including:
+### Frontend
+- Kotlin
+- Android Studio
+- AndroidX
+- Coroutines
+- Fragment-based UI
 
-Diagnosis
+### Backend
+- Python
+- FastAPI
+- Uvicorn
+- SQLAlchemy
+- Pydantic
 
-Emergency severity level
+### AI / retrieval
+- Ollama
+- ChromaDB
+- Sentence Transformers
+- Retrieval-Augmented Generation
 
-Immediate action
+### Storage / support
+- SQLite
+- Redis scaffolding
 
-This helps prioritize critical cases while identifying non-emergency conditions, assisting healthcare workers in faster decision-making.
+---
 
-Demo Cases
-Case 1 – Cardiac Emergency
-Input Symptoms:
+## Setup
 
-chest pain sweating nausea left arm pain
-Output:
+## Backend
 
-Diagnosis: Acute Myocardial Infarction
-Emergency_Level: CRITICAL
-Immediate_Action: Call emergency services immediately.
-Explanation:
-The system recognizes classic heart attack symptoms and prioritizes the case as CRITICAL.
+From the `backend/` directory:
 
-Case 2 – Mild Respiratory Illness
-Input Symptoms:
+```bash
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
 
-runny nose mild cough sore throat
-Output:
+Notes:
+- The backend currently uses SQLite: `sqlite:///./acuteassist.db`
+- Ollama must be running locally for the model call to work
+- ChromaDB must contain the `medical_knowledge` collection for retrieval to succeed
 
-Diagnosis: Upper Respiratory Infection
-Emergency_Level: LOW
-Immediate_Action: Rest, hydration, and monitor symptoms.
-Explanation:
-The system identifies a non‑emergency illness, avoiding unnecessary escalation.
+### Knowledge base loading
+The repository includes scripts under `backend/data/scripts/` to prepare and load knowledge chunks into ChromaDB.
 
-System Workflow
-User enters symptoms in Android App
-              ↓
-Request sent to FastAPI Backend
-              ↓
-Redis Cache checks for repeated queries
-              ↓
-RAG Pipeline retrieves medical knowledge
-              ↓
-ChromaDB vector database finds relevant chunks
-              ↓
-BioMistral medical LLM analyzes symptoms
-              ↓
-Structured triage recommendation generated
-              ↓
-Response sent back to Android App
-Project Architecture
-Android Mobile App
-        ↓
-FastAPI Backend
-        ↓
-Redis Cache
-        ↓
-RAG Retrieval Pipeline
-        ↓
-ChromaDB Vector Knowledge Base
-        ↓
-BioMistral Medical LLM (Ollama)
-        ↓
-Emergency Triage Response
-Tech Stack
-Frontend
-Android Studio
+---
 
-Kotlin / Java
+## Android
 
-REST API integration
+Open the `frontend/` folder in Android Studio and run the app on an emulator or device.
 
-Backend
-Python
+The emergency screen currently calls:
 
-FastAPI
+```text
+http://10.0.2.2:8000/ai-triage
+```
 
-Uvicorn
+`10.0.2.2` is used so the Android emulator can reach the local machine.
 
-AI / Machine Learning
-BioMistral Medical LLM
+---
 
-Ollama (local LLM inference)
+## API endpoints in the current code
 
-Retrieval-Augmented Generation (RAG)
+### Auth
+- `POST /auth/register`
+- `POST /auth/login`
 
-Data Layer
-ChromaDB (vector database)
+### Patients
+- `POST /patients/`
+- `GET /patients/`
+- `GET /patients/{patient_id}`
 
-Redis (caching layer)
+### Hospitals
+- `POST /hospitals/`
+- `GET /hospitals/`
+- `POST /hospitals/link/`
 
-Development Tools
-Git & GitHub
+### Medical tests
+- `POST /medical-tests/`
 
-Python virtual environments
+### Triage
+- `POST /ai-triage`
+- `POST /triage/{patient_id}`
 
-Key Features
-AI-assisted symptom analysis
+---
 
-Retrieval-Augmented Generation (RAG) for medical reasoning
+## Current limitations
 
-Vector-based medical knowledge retrieval
+This repository is still in prototype stage.
 
-Structured triage output format
+Some modules are present as scaffolding and are not fully wired into the main runtime yet, including:
+- Redis caching in the request path
+- fragmented history fetch logic
+- some hospital-specific service files
+- embedding and risk engine placeholders
 
-Caching for faster responses
+The main triage idea is implemented, but the production workflow still needs cleanup before deployment.
 
-Scalable architecture for integration with healthcare applications
+---
 
-Disclaimer
-This project is designed for educational and research purposes only and does not replace professional medical diagnosis or treatment.
+## Disclaimer
 
-If you want, I can also give you a much stronger README version that can help you score higher on the hackathon evaluation criteria (judges often look for specific wording).
+AcuteAssist is intended for educational and prototype use only. It does not replace professional clinical judgment, emergency protocols, or formal medical diagnosis.
 
+---
 
-Show more
+## Suggested next step
 
-
-
-
-
-
-
-with good space which i can copy paste directly
-
-ChatGPT10:39 AM
-Here is a clean, well‑spaced README that you can copy‑paste directly into GitHub.
-
-AcuteAssist – AI‑Powered Emergency Triage System
-AcuteAssist is an AI‑assisted emergency triage system designed to analyze patient symptoms and provide structured medical recommendations using Retrieval‑Augmented Generation (RAG).
-
-The system integrates a vector medical knowledge base with a medical language model to assist in identifying possible emergency conditions and prioritizing patient care.
-
-Problem Statement
-Emergency departments frequently face high patient volumes and limited medical staff, making rapid triage essential for identifying life‑threatening conditions.
-
-Patients presenting symptoms such as chest pain, breathing difficulty, or neurological issues require quick evaluation to determine the urgency of treatment.
-
-However:
-
-Initial triage is often time‑consuming
-
-Symptoms can be ambiguous or overlapping
-
-Delays in recognizing critical conditions can impact patient outcomes
-
-There is a need for an AI‑assisted system that can quickly analyze symptoms and provide structured triage recommendations to support healthcare professionals.
-
-Proposed Solution
-AcuteAssist provides an AI-driven triage assistant that helps identify potential medical emergencies.
-
-The system:
-
-Accepts patient symptoms from a mobile application.
-
-Retrieves relevant medical knowledge using vector search.
-
-Uses a medical language model to analyze symptoms.
-
-Generates a structured triage response including:
-
-Diagnosis
-
-Emergency severity level
-
-Immediate recommended action.
-
-This helps prioritize critical cases while identifying non-emergency conditions, assisting healthcare staff in faster decision-making.
-
-Demo Cases
-Case 1 – Cardiac Emergency
-Input Symptoms
-
-chest pain sweating nausea left arm pain
-Output
-
-Diagnosis: Acute Myocardial Infarction
-Emergency_Level: CRITICAL
-Immediate_Action: Call emergency services immediately.
-Explanation
-
-The system recognizes classic heart attack symptoms and prioritizes the case as CRITICAL, recommending immediate medical attention.
-
-Case 2 – Mild Respiratory Illness
-Input Symptoms
-
-runny nose mild cough sore throat
-Output
-
-Diagnosis: Upper Respiratory Infection
-Emergency_Level: LOW
-Immediate_Action: Rest, hydration, and monitor symptoms.
-Explanation
-
-The system identifies a non‑emergency condition and provides basic care guidance without unnecessary escalation.
-
-System Workflow
-User enters symptoms in the Android application
-                ↓
-Request sent to FastAPI backend
-                ↓
-Redis cache checks for repeated queries
-                ↓
-RAG pipeline retrieves relevant medical knowledge
-                ↓
-ChromaDB vector database finds similar symptom contexts
-                ↓
-BioMistral medical LLM analyzes symptoms and knowledge
-                ↓
-Structured triage recommendation generated
-                ↓
-Response returned to the Android application
-Project Architecture
-Android Mobile App
-        ↓
-FastAPI Backend
-        ↓
-Redis Cache Layer
-        ↓
-RAG Retrieval Pipeline
-        ↓
-ChromaDB Vector Database
-        ↓
-BioMistral Medical LLM (via Ollama)
-        ↓
-Structured Emergency Triage Response
-Tech Stack
-Frontend
-Android Studio
-
-Kotlin / Java
-
-REST API Integration
-
-Backend
-Python
-
-FastAPI
-
-Uvicorn
-
-AI / Machine Learning
-BioMistral Medical Language Model
-
-Ollama (Local LLM Inference)
-
-Retrieval‑Augmented Generation (RAG)
-
-Data Layer
-ChromaDB (Vector Database for medical knowledge retrieval)
-
-Redis (Caching layer for faster repeated queries)
-
-Development Tools
-Git & GitHub
-
-Python Virtual Environment
-
-Key Features
-AI‑assisted symptom analysis
-
-Retrieval‑Augmented Generation (RAG) for medical reasoning
-
-Vector-based medical knowledge retrieval
-
-Structured triage output format
-
-Redis caching for faster responses
-
-Modular and scalable architecture
-
-Disclaimer
-This project is intended for educational and research purposes only.
-
-It does not replace professional medical diagnosis or treatment and should not be used as a substitute for consultation with qualified healthcare professionals.
+The next logical upgrade is to connect:
+- authenticated users
+- real patient history-->Integrate with UHID and ABHA
+- cached retrieval
+- structured triage output
+- proper role-based access control
+- Given the option to upload patient current medical tests files.
+into one clean production flow.
