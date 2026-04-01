@@ -1,4 +1,3 @@
-# CardioAid
 # AcuteAssist
 
 AcuteAssist is an AI-assisted emergency triage system for government and NGO-run hospitals. It is designed to help doctors on emergency duty generate a short, relevant clinical summary from a patient’s symptoms, past history, and retrieved medical knowledge so they can act faster with less noise.
